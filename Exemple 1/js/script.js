@@ -82,3 +82,43 @@ const tab = [11,22,33,44,55,66,77,88,99];
 console.log(tab.join("_|_"));
 
 console.log(`l'élément 77 ${tab.includes(77) ? "est" : "n'est pas"} dans le tableau [${tab.join(", ")}]`);
+
+
+const tabAssociatif = {};
+
+tabAssociatif.prenom="Yann";
+tabAssociatif.age=27;
+
+console.log(tabAssociatif);
+console.log(tabAssociatif.prenom);
+
+let pikachu = {
+    id: 25,
+    name: "Pikachu",
+    weight: 6.0,
+    hpMax: 80,
+    attacks: [
+        {
+            name:"Vive-Attaque",
+            type:"Normal",
+            damages:10,
+        },
+        {
+            name:"Boule Elek",
+            type:'Elek',
+            damages:30,
+        },
+    ],
+}
+
+console.log(pikachu);
+
+function listerAttaquesPokemon(pokemon) {
+    console.log(`${pokemon.name} possède ${pokemon.attacks.length} attaques :`);
+
+    pokemon.attacks.forEach(attack => {
+        console.log(`${attack.name}         ${attack.damages}`);
+    });
+}
+
+listerAttaquesPokemon(pikachu);
